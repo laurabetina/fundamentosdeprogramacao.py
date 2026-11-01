@@ -1,22 +1,27 @@
-#CLASSIFICAÇÃO DE DESEMPENHO
+#QUESTÃO 5 - MÉDIA DE VALORES
 
-produt = float(input("Digite a nota de PRODUTIVIDADE: ").replace(",", "."))
-qualidade = float(input("Digite a nota de QUALIDADE: ").replace(",", "."))
-presenca = float(input("Digite o PERCENTUAL DE PRESENÇA: ").replace("%", "").replace(",", "."))
-media = (qualidade + produt/2)
+quantidade = int(input("Olá Usuaria(o)! Quantos números serão informados? "))
 
-if presenca < 75:
-   print("Desempenho comprometido por baixa frequência ")
+soma = 0
 
-elif media >= 9 and presenca >= 90:
-   print("EXCELENTE ")
+for i in range(1, quantidade + 1):
+    valor = float(input("Digite o " + str(i) + "º valor: "))
 
-elif media >=7 and presenca >= 85: 
-   print("BOM")
+    soma += valor
 
-elif media >= 5 and presenca >= 75:
-   print("REGULAR")
+    if i == 1:
+        maior = valor
+        menor = valor
+    else:
+        if valor > maior:
+            maior = valor
 
-else:
-   print("INSATISFATÓRIO")
+        if valor < menor:
+            menor = valor
 
+media = soma / quantidade
+
+print("Soma dos valores:", soma)
+print("Média dos valores:", media)
+print("Maior valor:", maior)
+print("Menor valor:", menor)

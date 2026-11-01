@@ -1,29 +1,13 @@
-#CLASSIFICAÇÃO DO PRODUTO
+#QUESTÃO 2 - NÚMEROS PARES
 
-preço = float(input("Digite o preço do produto em R$: ").replace(",", "."))
-qntd = int(input("Quantidade do produto em estoque: "))
+nome = int(input("Olá Usuário(a)\nDigite um número inteiro positivo: "))
+quantidade = 0
 
-if preço <= 0:
-    print ("PREÇO INVÁLIDO")
+print("NÚMEROS PARES")
 
-if qntd < 0:
-    print ("QUANTIDADE INVÁLIDA")
+for i in range (1, nome + 1): 
+    if i % 2 == 0:
+     print(i)
+     quantidade += 1
 
-elif preço > 1000 and qntd < 5:
-    print ("PRODUTO CARO COM ESTOQUE CRÍTICO")
-
-elif preço >1000 and qntd <= 20:
- print("PRODUTO CARO COM ESTOQUE NORMAL")
-
-elif preço >1000 and qntd > 20:
-   print("PRODUTO CARO COM ESTOQUE NORMAL")
-
-elif preço <=1000 and qntd < 5:
-   print("ESTOQUE CRÍTICO")
-
-else:
-   print ("ESTOQUE NORMAL")
-
-print(f"Preço: R$ {preço:.2f}")
-
-
+print("Quantidade números pares: ", quantidade)
